@@ -2,18 +2,12 @@
 
 {
   # KDE Plasma 6
-  services.xserver.enable = true;
-  
   services.displayManager.sddm = {
     enable = true;
+    wayland.enable = true;  # Używaj Wayland dla lepszej wydajności
   };
   
   services.desktopManager.plasma6.enable = true;
-  
-  # Konfiguruj monitory
-  services.xserver.displayManager.setupCommands = ''
-    ${pkgs.xorg.xrandr}/bin/xrandr --auto
-  '';
 
   # Klawiatura
   services.xserver.xkb = {

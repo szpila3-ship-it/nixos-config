@@ -1,11 +1,5 @@
 { config, pkgs, ... }:
 
-let
-  # Importuj NUR (Nix User Repository)
-  nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-    inherit pkgs;
-  };
-in
 {
   # Programy systemowe
   environment.systemPackages = with pkgs; [
@@ -18,7 +12,6 @@ in
       ];
     })
     firefox
-    #nur.repos.novel2430.zen-browser-bin
 
     # Narzędzia podstawowe
     vim
@@ -38,18 +31,13 @@ in
     adwaita-icon-theme
     papirus-icon-theme
 
-    # Pakiet biurowy
-    #onlyoffice-desktopeditors
-
     # Narzędzia systemowe
     rustdesk
     qdirstat
     tealdeer
     fastfetch
-    #gparted
     qpwgraph
     qbittorrent
-    #winboat
 
     # Komunikatory
     discord
@@ -67,18 +55,15 @@ in
 
     # KDE i multimedia
     kdePackages.kdenlive
-    #nur.repos.shadowrz.klassy-qt6
     avidemux
     haruna
-    #darkly
 
     # Narzędzia KDE
     kdePackages.kate
     kdePackages.plasma-browser-integration
 
-    # Dla KDE Plasma 6:
+    # Dla KDE Plasma 6
     kdePackages.kconfig
     kdePackages.kservice
-
   ];
 }

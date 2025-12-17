@@ -1,5 +1,24 @@
+# Hardware-specific config (nie synchronizuj między maszynami)
 hardware-configuration.nix
+
+# Sekrety (hasła, klucze)
 secrets/
 *-password
-nixos-secrets/
 *.secret
+nixos-secrets/
+
+# Backup files
+*.backup
+*.old
+*.bak
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
