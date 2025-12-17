@@ -1,0 +1,18 @@
+# Hardware-specific (każdy ma swój)
+hardware-configuration.nix
+
+# Wrażliwe dane
+secrets.nix
+*.key
+*.pem
+
+# Temporary files
+*.swp
+*.swo
+*~
+.#*
+*.bak
+
+# Build artifacts
+result
+result-*
