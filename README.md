@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 #Polski
->>>>>>> 2094e8ee6d2feb2649e96ba3df697395ca1979d2
 # Moja konfiguracja NixOS
 
 ## Struktura
@@ -37,8 +34,6 @@ git pull
 sudo cp *.nix /etc/nixos/
 sudo nixos-rebuild switch
 ```
-<<<<<<< HEAD
-=======
 
 #English
 # My NixOS Configuration
@@ -76,4 +71,3 @@ git pull
 sudo cp *.nix /etc/nixos/
 sudo nixos-rebuild switch
 ```
->>>>>>> 2094e8ee6d2feb2649e96ba3df697395ca1979d2
