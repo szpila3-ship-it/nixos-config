@@ -17,3 +17,4 @@ secrets.nix
 result
 result-*
 /etc/nixos-secrets/
+/etc/nixos-secrets/
