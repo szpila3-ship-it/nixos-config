@@ -70,6 +70,9 @@ in
         export LESS_TERMCAP_so=$'\e[01;33m'
         export LESS_TERMCAP_ue=$'\e[0m'
         export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+        #Fastfetch
+        fastfetch
       '';
     };
 
@@ -202,8 +205,8 @@ in
     # ZMIENNE ŚRODOWISKOWE
     # ═══════════════════════════════════════════════════════════
     home.sessionVariables = {
-      EDITOR = "nano";
-      VISUAL = "nano";
+      EDITOR = "vim";
+      VISUAL = "vim";
       BROWSER = "firefox";
       TERMINAL = "konsole";
     };
