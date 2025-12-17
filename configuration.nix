@@ -15,6 +15,8 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
+  # Sublime Text 4 (build 4200) to proprietary binary prekompilowany
+  # z OpenSSL 1.1.1. Nie można go przebudować z nowszym OpenSSL.
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
   ];
