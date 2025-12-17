@@ -1,3 +1,4 @@
+#Polski
 # Moja konfiguracja NixOS
 
 ## Struktura
@@ -27,6 +28,43 @@ sudo nixos-rebuild switch
 ```
 
 ## Aktualizacja z repo
+```bash
+cd ~/nixos-config
+git pull
+sudo cp *.nix /etc/nixos/
+sudo nixos-rebuild switch
+```
+
+#English
+# My NixOS Configuration
+
+## Structure
+- `configuration.nix` - main file importing all modules
+- `boot.nix` - bootloader, kernel, zram
+- `desktop.nix` - KDE Plasma, SDDM
+- `networking.nix` - network, firewall
+- `locale.nix` - localization, timezone, fonts
+- `users.nix` - users
+- `packages.nix` - system packages
+- `gaming.nix` - Steam, gaming
+- `services.nix` - system services
+
+## Installation on a new system
+```bash
+# Clone repo
+git clone https://github.com/YOUR_USERNAME/nixos-config /tmp/nixos-config
+
+# Copy files
+sudo cp /tmp/nixos-config/*.nix /etc/nixos/
+
+# Generate hardware-configuration.nix
+sudo nixos-generate-config --show-hardware-config > /etc/nixos/hardware-configuration.nix
+
+# Rebuild
+sudo nixos-rebuild switch
+```
+
+## Update from repo
 ```bash
 cd ~/nixos-config
 git pull
