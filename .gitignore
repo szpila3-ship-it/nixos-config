@@ -2,3 +2,4 @@ hardware-configuration.nix
 secrets/
 *-password
 nixos-secrets/
+*.secret
