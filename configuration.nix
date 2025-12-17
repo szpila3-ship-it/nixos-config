@@ -11,6 +11,7 @@
     ./packages.nix
     ./gaming.nix
     ./services.nix
+    ./sync.nix 
   ];
 
   nixpkgs.config.allowUnfree = true;
