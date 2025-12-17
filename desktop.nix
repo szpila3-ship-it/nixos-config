@@ -9,6 +9,13 @@
   
   services.desktopManager.plasma6.enable = true;
 
+  # Session management - zapisywanie stanu sesji
+  services.xserver.displayManager.sessionCommands = ''
+    # Włącz session restore
+    ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file ksmserverrc --group General --key loginMode restoreSavedSession
+  '';
+
+
   # Klawiatura
   services.xserver.xkb = {
     layout = "pl";
