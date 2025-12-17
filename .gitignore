@@ -1,20 +1,4 @@
-# Hardware-specific (każdy ma swój)
 hardware-configuration.nix
-
-# Wrażliwe dane
-secrets.nix
-*.key
-*.pem
-
-# Temporary files
-*.swp
-*.swo
-*~
-.#*
-*.bak
-
-# Build artifacts
-result
-result-*
-/etc/nixos-secrets/
-/etc/nixos-secrets/
+secrets/
+*-password
+nixos-secrets/
