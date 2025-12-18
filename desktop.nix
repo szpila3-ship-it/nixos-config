@@ -4,24 +4,29 @@
   # KDE Plasma 6
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = true;  # Używaj Wayland dla lepszej wydajności
+    wayland.enable = true;  # Wracamy na Wayland
   };
   
   services.desktopManager.plasma6.enable = true;
 
-  # Session management - zapisywanie stanu sesji
-  services.xserver.displayManager.sessionCommands = ''
-    # Włącz session restore
-    ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file ksmserverrc --group General --key loginMode restoreSavedSession
-  '';
-
-
-  # Klawiatura
-  services.xserver.xkb = {
-    layout = "pl";
-    variant = "";
+  # Włącz X11 (potrzebne dla SDDM)
+  services.xserver = {
+    enable = true;
+    
+    xkb = {
+      layout = "pl";
+      variant = "";
+    };
   };
+
   console.keyMap = "pl2";
+
+  # Libinput
+  services.libinput = {
+    enable = true;
+    touchpad.naturalScrolling = false;
+    mouse.naturalScrolling = false;
+  };
 
   # Dźwięk
   services.pulseaudio.enable = false;

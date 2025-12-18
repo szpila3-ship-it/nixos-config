@@ -12,6 +12,9 @@ in
 
   home-manager.users.draxmen = { pkgs, lib, ... }: {
     home.stateVersion = "24.05";
+    
+    # Wyłącz sprawdzanie wersji Home Manager vs Nixpkgs
+    home.enableNixpkgsReleaseCheck = false;
 
     # ═══════════════════════════════════════════════════════════
     # PAKIETY PER-USER
@@ -81,10 +84,11 @@ in
     # ═══════════════════════════════════════════════════════════
     programs.git = {
       enable = true;
-      userName = "Draxmen";
-      userEmail = "szpila3@gmail.com";  # ZMIEŃ!
       
-      extraConfig = {
+      settings = {
+        user.name = "Draxmen";
+        user.email = "szpila3@gmail.com";
+        
         init.defaultBranch = "main";
         pull.rebase = false;
         core.editor = "vim";
@@ -209,9 +213,6 @@ in
       VISUAL = "vim";
       BROWSER = "firefox";
       TERMINAL = "konsole";
-      
-      # Steam - skalowanie interfejsu
-      STEAM_FORCE_DESKTOPUI_SCALING = "2.0";  # Dostosuj wartość: 1.5, 2.0, 2.5
     };
 
     # ═══════════════════════════════════════════════════════════
