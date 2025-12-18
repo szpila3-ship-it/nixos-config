@@ -44,6 +44,14 @@ in
         # System
         ll = "ls -la";
         la = "eza -la --icons";
+        
+        # NixOS - zarządzanie systemem
+        nos = "sudo nixos-rebuild switch";              # Rebuild systemu
+        noc = "sudo nix-collect-garbage -d";            # Wyczyść stare generacje
+        nol = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";  # Historia
+        nor = "sudo nixos-rebuild switch --rollback";   # Rollback do poprzedniej
+        
+        # Aliasy kompatybilne
         nixup = "sudo nixos-rebuild switch";
         nixsync = "sudo nixos-sync";
         nixclean = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
