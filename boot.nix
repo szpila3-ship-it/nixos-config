@@ -6,7 +6,7 @@
     loader = {
       systemd-boot = {
         enable = true;
-        consoleMode = "2";
+        consoleMode = "1";
       };
       efi.canTouchEfiVariables = true;
     };

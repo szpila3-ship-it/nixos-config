@@ -179,58 +179,6 @@ in
       LayoutName=thumbnail_grid
     '';
 
-    # Steam - custom launcher ze skalowaniem
-    home.file.".local/share/applications/steam-scaled.desktop".text = ''
-      [Desktop Entry]
-      Name=Steam (Skalowane)
-      Comment=Application for managing and playing games on Steam
-      Exec=steam -forcedesktopscaling 3.0 %U
-      Icon=steam
-      Terminal=false
-      Type=Application
-      Categories=Network;FileTransfer;Game;
-      MimeType=x-scheme-handler/steam;x-scheme-handler/steamlink;
-      Actions=Store;Community;Library;Servers;Screenshots;News;Settings;BigPicture;Friends;
-      PrefersNonDefaultGPU=true
-      X-KDE-RunOnDiscreteGpu=true
-
-      [Desktop Action Store]
-      Name=Store
-      Exec=steam steam://store
-
-      [Desktop Action Community]
-      Name=Community
-      Exec=steam steam://url/SteamIDControlPage
-
-      [Desktop Action Library]
-      Name=Library
-      Exec=steam steam://open/games
-
-      [Desktop Action Servers]
-      Name=Servers
-      Exec=steam steam://open/servers
-
-      [Desktop Action Screenshots]
-      Name=Screenshots
-      Exec=steam steam://open/screenshots
-
-      [Desktop Action News]
-      Name=News
-      Exec=steam steam://open/news
-
-      [Desktop Action Settings]
-      Name=Settings
-      Exec=steam steam://open/settings
-
-      [Desktop Action BigPicture]
-      Name=Big Picture
-      Exec=steam steam://open/bigpicture
-
-      [Desktop Action Friends]
-      Name=Friends
-      Exec=steam steam://open/friends
-    '';
-
     # ═══════════════════════════════════════════════════════════
     # DOTFILES I PLIKI KONFIGURACYJNE
     # ═══════════════════════════════════════════════════════════
