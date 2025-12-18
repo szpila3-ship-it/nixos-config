@@ -12,6 +12,7 @@
     ./services.nix
     ./sync.nix
     ./home-manager.nix
+    ./gaming.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

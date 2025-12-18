@@ -38,6 +38,7 @@
     fastfetch
     qpwgraph
     qbittorrent
+    mesa-demos        # zawiera glxgears
 
     # Komunikatory
     discord
@@ -65,5 +66,30 @@
     # Dla KDE Plasma 6
     kdePackages.kconfig
     kdePackages.kservice
+
+    # ═══════════════════════════════════════════════════════════
+    # NARZĘDZIA SPECYFICZNE DLA LEGION GO / HANDHELDA
+    # ═══════════════════════════════════════════════════════════
+    
+    # Monitoring i kontrola
+    radeontop         # Monitoring GPU AMD
+    lm_sensors        # Temperatury CPU
+    htop              # Monitor procesów
+    
+    # Kontrola jasności i energii
+    acpi              # Status baterii
+    
+    # Narzędzia do rotacji ekranu
+    wdisplays         # GUI do konfiguracji wyświetlaczy (Wayland)
+    
+    # Audio tools
+    pavucontrol       # Kontrola audio (GUI)
+    helvum            # Patchbay dla PipeWire
+    
+    # Kontrolery i gamepad
+    antimicrox        # Mapowanie gamepad -> klawiatura/mysz
+    
+    # Wsparcie dla ekranu dotykowego
+    xorg.xinput       # Konfiguracja urządzeń wejściowych
   ];
 }
