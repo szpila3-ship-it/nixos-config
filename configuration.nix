@@ -9,7 +9,7 @@
     ./locale.nix
     ./users.nix
     ./packages.nix
-    ./gaming.nix
+    #./gaming.nix
     ./services.nix
     ./sync.nix
     ./home-manager.nix  # NOWE!
