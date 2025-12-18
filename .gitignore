@@ -14,13 +14,12 @@ hardware-configuration.nix
 .idea/
 *.swp
 *.swo
-*~
 
 # Nix build artifacts
 result
 result-*
 
-# Secrets (if any)
+# Secrets
 secrets.nix
 *.secret
 
