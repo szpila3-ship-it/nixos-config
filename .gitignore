@@ -1,16 +1,13 @@
-# Hardware-specific config (nie synchronizuj między maszynami)
-hardware-configuration.nix
+# NixOS Configuration - .gitignore
 
-# Sekrety (hasła, klucze)
-secrets/
-*-password
-*.secret
-nixos-secrets/
+# Hardware configuration (unique per machine)
+hardware-configuration.nix
 
 # Backup files
 *.backup
-*.old
 *.bak
+*.old
+*~
 
 # Editor files
 .vscode/
@@ -18,6 +15,17 @@ nixos-secrets/
 *.swp
 *.swo
 *~
+
+# Nix build artifacts
+result
+result-*
+
+# Secrets (if any)
+secrets.nix
+*.secret
+
+# Logs
+*.log
 
 # OS files
 .DS_Store
